@@ -36,6 +36,11 @@ def del_in_file(buf, del_line, handler): # Перезапись файла
 
 
 if __name__ == "__main__":
+    try: 
+        os.mkdir('songs') # Создание папки
+    except:
+        pass
+
     buf, filee = file_worker()
     counter = 0
     for line in buf:
@@ -49,9 +54,3 @@ if __name__ == "__main__":
         buf[counter] = ''
         counter += 1
     filee.close()
-        
-        
-
-
-
-# Добавить установку в директорию
